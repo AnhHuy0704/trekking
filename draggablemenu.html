@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/v4-shims.min.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <div class="icon"><i class="fas fa-chevron-left"></i></div>
+        <ul class="tab-box">
+            <li class="tab">Hanoi</li>
+            <li class="tab">Saigon</li>
+            <li class="tab">Tokyo</li>
+            <li class="tab">Cophenhagen</li>
+            <li class="tab">Newyork</li>
+            <li class="tab">Moscow</li>
+            <li class="tab">Saigon</li>
+            <li class="tab">Tokyo</li>
+            <li class="tab">Cophenhagen</li>
+            <li class="tab">Newyork</li>
+            <li class="tab">Moscow</li>
+        </ul>
+        <div class="icon"><i class="fas fa-chevron-right"></i></div>
+
+    </div>
+
+</body>
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: aqua;
+    }
+    .wrapper{
+        background-color: #fff;
+        max-width: 700px;
+        overflow-x: hidden;
+        border-radius: 30px;
+        padding: 8px;
+    }
+    .wrapper .tab-box{
+        display: flex;
+        list-style: none;
+        gap:10px;
+        overflow-x: hidden;
+    }
+   
+    .tab-box .tab{
+        font-size: 1em;
+        background-color: rgb(196, 189, 189)060;
+        border-radius: 50px;
+        padding: 15px 15px;
+        border:1px solid black;
+        white-space: nowrap;
+    }
+
+</style>
+<script>
+    const box = document.querySelector('.tab-box');
+    
+    const dragging = (e) =>{
+        
+        box.scrollLeft -=e.movementX;
+    };
+  
+    box.addEventListener("mousemove",dragging);
+    // document.addEventListener('mouseup',dragStop);
+    // box.addEventListener('mousedown',() => isDragging=true);
+</script>
+</html>
